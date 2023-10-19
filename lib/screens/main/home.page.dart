@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
               titlePadding: _isPinned ? const EdgeInsets.only(left: 16,bottom: 16): EdgeInsets.zero,
               title: _isPinned ? const Align(
                 alignment: Alignment.bottomCenter,
-                  child: Text('Amos Ahindukha [Cashier]', textAlign: TextAlign.center,)
+                  child: Text('Amos Ahindukha Cashier', textAlign: TextAlign.center,)
               ):null,
               background: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -101,11 +101,13 @@ class _HomePageState extends State<HomePage> {
                   Icon(
                     Icons.shopping_bag,
                     size: 50,
+                    color: Colors.white,
                   ),
                   Text(
                     'Pesapos',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white,
                     ),
                   ),
                 ],

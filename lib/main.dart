@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pesapos/screens/tabs/pointofsale.dart';
 import 'package:pesapos/screens/tabs/settings.dart';
+import 'package:pesapos/screens/tabs/suppliers.dart';
 import 'package:provider/provider.dart';
 import 'screens/main/home.page.dart';
 import 'themes/theme.provider.dart';
@@ -42,8 +43,12 @@ class MyApp extends StatelessWidget {
 
         GetPage(
             name: '/pos',
-            page: () => PointOfSale(),
-        )
+            page: () => const PointOfSale(),
+        ),
+
+        GetPage(name: '/suppliers',
+            page: () => const Suppliers()
+        ),
       ],
     );
   }

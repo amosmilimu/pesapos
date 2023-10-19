@@ -34,6 +34,16 @@
 
     <key>NSPhotoLibraryUsageDescription</key>
     <string>This app needs photos access to get QR code from photo library</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>Need BLE permission</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Need BLE permission</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Need Location permission</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Need Location permission</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Need Location permission</string>
 
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

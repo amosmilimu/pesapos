@@ -35,7 +35,7 @@ class _PointOfSaleState extends State<PointOfSale> {
           decoration: InputDecoration(
             hintText: 'Search...',
             suffixIcon: IconButton(
-              icon: const Icon(Icons.clear),
+              icon: const Icon(Icons.clear, color: Colors.white,),
               onPressed: () {
                 setState(() {
                   _searchController.clear();

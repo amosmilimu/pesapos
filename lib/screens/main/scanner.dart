@@ -1,5 +1,5 @@
 import 'dart:typed_data';
-
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +7,7 @@ class ScannerPage extends StatelessWidget {
   ScannerPage({super.key});
 
   final MobileScannerController cameraController = MobileScannerController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +52,12 @@ class ScannerPage extends StatelessWidget {
       body: MobileScanner(
         // fit: BoxFit.contain,
         controller: cameraController,
-        onDetect: (capture) {
+        onDetect: (capture) async {
+          AssetsAudioPlayer.newPlayer().open(
+            Audio("assets/sounds/scanner.mp3"),
+            autoStart: true,
+            showNotification: true,
+          );
           final List<Barcode> barcodes = capture.barcodes;
           final Uint8List? image = capture.image;
           for (final barcode in barcodes) {
