@@ -21,7 +21,6 @@ class _SuppliersState extends State<Suppliers> {
         child: CustomSearchBar(
           searchController: _searchController,
           appBarTitle: 'Suppliers',
-          showExportButton: true,
           onExportClick: _exportToExcel,
         ),
       ),

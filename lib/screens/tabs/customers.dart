@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:pesapos/widgets/list.tile.dart';
 import 'package:pesapos/widgets/searchbar.dart';
 
-class Inventory extends StatefulWidget {
-  const Inventory({super.key});
+class Customers extends StatefulWidget {
+  const Customers({super.key});
 
   @override
-  State<Inventory> createState() => _InventoryState();
+  State<Customers> createState() => _CustomersState();
 }
 
-class _InventoryState extends State<Inventory> {
+class _CustomersState extends State<Customers> {
 
   final TextEditingController _searchController = TextEditingController();
 
@@ -20,8 +20,7 @@ class _InventoryState extends State<Inventory> {
         preferredSize: const Size.fromHeight(56.0),
         child: CustomSearchBar(
           searchController: _searchController,
-          appBarTitle: 'Inventory',
-          showScanButton: true,
+          appBarTitle: 'Customers',
           onExportClick: _exportToExcel,
         ),
       ),

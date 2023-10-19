@@ -4,14 +4,14 @@ class CustomSearchBar extends StatefulWidget {
 
   final TextEditingController searchController;
   final String appBarTitle;
-  final bool showExportButton;
+  final bool showScanButton;
   final VoidCallback? onExportClick;
 
   const CustomSearchBar(
       {super.key,
       required this.searchController,
       required this.appBarTitle,
-      this.showExportButton = false,
+      this.showScanButton = false,
       this.onExportClick});
 
   @override
@@ -55,11 +55,25 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
               });
             },
           ),
-        if (widget.showExportButton)
-          IconButton(
-            icon: const Icon(Icons.cloud_download, color: Colors.white,),
-            onPressed: widget.onExportClick,
-          ),
+        //if (widget.showExportButton)
+          PopupMenuButton(
+            itemBuilder: (context) => [
+              const PopupMenuItem(
+                value: 'export_excel',
+                child: Text('Export to Excel'),
+              ),
+              const PopupMenuItem(
+                value: 'import_excel',
+                child: Text('Import from Excel'),
+              ),
+
+              if (widget.showScanButton)
+              const PopupMenuItem(
+                value: 'scan_to_add',
+                child: Text('Scan to Add'),
+              ),
+            ],
+          )
       ],
     );
   }

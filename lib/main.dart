@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pesapos/screens/tabs/customers.dart';
+import 'package:pesapos/screens/tabs/inventory.dart';
 import 'package:pesapos/screens/tabs/pointofsale.dart';
 import 'package:pesapos/screens/tabs/settings.dart';
 import 'package:pesapos/screens/tabs/suppliers.dart';
@@ -48,6 +50,14 @@ class MyApp extends StatelessWidget {
 
         GetPage(name: '/suppliers',
             page: () => const Suppliers()
+        ),
+
+        GetPage(name: '/customers',
+            page: () => const Customers()
+        ),
+
+        GetPage(name: '/inventory',
+            page: () => const Inventory()
         ),
       ],
     );
